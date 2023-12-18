@@ -9,7 +9,11 @@ class Show extends React.Component {
                 <h2>{pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)}</h2>
                   <img src={pokemon.img}/>
                 <a href={`/pokemon`}>Back</a>
-                
+                <br />
+                <a href={`/pokemon/${pokemon._id}/edit`}>Eidt</a>
+                 <form action={`/pokemon/${pokemon._id}?_method=DELETE`} method="POST">
+                   <input type="submit" value="DELETE" />
+                 </form>
             </div>
 
         )
