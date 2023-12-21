@@ -43,6 +43,7 @@ app.get('/', async (req, res) => {
     res.send("Welcome To The <a href='/pokemon'>POKEMON</a> APP!");
   })
 
+  //Index
   app.get('/pokemon',async (req, res) => {
     // res.render('Index',{pokemons:pokemon});
     // res.render('fruits/Index', {fruits: fruits});
@@ -62,7 +63,7 @@ app.get('/pokemon/new', (req, res) => {
 app.post('/pokemon', async (req, res) =>{
   try {
     const createPokemon = await Pokemon.create(req.body);
-    res.status(200).redirect("/pokemon");
+    res.render("Show", { p : searchPokemon });
   } catch (err) {
     res.status(400).send(err);
   }
@@ -108,7 +109,7 @@ app.get("/pokemon/:id/edit", async (req, res) => {
     // res.render('fruits/Index', {fruits: fruits});
     try{
       const foundPokemon = await Pokemon.findById(req.params.id);
-      res.render('Show', {pokemon: foundPokemon});
+      res.render('Show', {p: foundPokemon});
     } catch (err){
       res.status(400).send(err);
     }

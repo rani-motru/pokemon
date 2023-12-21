@@ -1,9 +1,9 @@
 const React = require("react");
-const imgsize = {
-  width: "100px",
-  height: "100px",
-};
-const pokenum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+// const imgsize = {
+//   width: "100px",
+//   height: "100px",
+// };
+// const pokenum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 class Edit extends React.Component {
   render() {
     return (
@@ -20,7 +20,14 @@ class Edit extends React.Component {
             defaultValue={this.props.pokemon.name}
           />
           <br />
-          Choose photo:
+          Img:
+          <input 
+          type="text"
+          name="img"
+          defaultValue={this.props.pokemon.img}/>
+          <br/>
+
+          {/* Choose photo:
           <br />
           {pokenum.map((num, index) => {
             return (
@@ -37,11 +44,11 @@ class Edit extends React.Component {
                   src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
                     pokenum[num - 1]
                   }.png`}
-                />
-              </label>
-            );
+                /> */}
+              {/* </label> */}
+            {/* );
           })}
-          <br />
+          <br /> */}
           <input type="submit" value="Submit Changes" />
         </form>
       </div>

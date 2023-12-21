@@ -27,10 +27,12 @@ class Index extends React.Component {
                   Name:
                   <br />
                   {pokemon.name}
+                  </a> {' '}<img src={pokemon.img} alt="s" />
                   <br />
-                  Img: <br />
-                  <img src={pokemon.img} />
-                </a>
+                  <a href={`/pokemon/${pokemon._id}/edit`}> Edit This Pokemon Character</a>
+                                <form action={`/pokemon/${pokemon._id}?_method=DELETE`} method="POST">
+                                    <input type="submit" value="DELETE" />
+                                </form>
               </li>
             );
           })}

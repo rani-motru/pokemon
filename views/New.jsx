@@ -3,7 +3,7 @@ const imgsize = {
   width: "100px",
   height: "100px",
 };
-const pokenum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+// const pokenum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 
 class New extends React.Component {
   render() {
@@ -14,7 +14,9 @@ class New extends React.Component {
           Name:
           <input type="text" name="name" />
           <br />
-          choose photo:
+          Img:  < input type="text" name="img"/> <br />
+              
+          {/* choose photo:
           <br />
           {pokenum.map((num, index) => {
             return (
@@ -33,11 +35,11 @@ class New extends React.Component {
                     pokenum[num - 1]
                   }.png`}
                 />
-              </label>
-            );
-          })}
+          //     </label> */}
+          {/* //   );
+          // })} */}
           <br />
-          <button type="submit">submit</button>
+          <input type="submit" name= " " value="Create Pokemons"/>
         </form>
       </div>
     );
